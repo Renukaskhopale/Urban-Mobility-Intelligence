@@ -1,115 +1,74 @@
 # 🚦 Urban Mobility Intelligence
 
-> An AI-powered urban mobility analytics platform that leverages data science, machine learning, and visualization to analyze traffic patterns, optimize transportation systems, and support smart city decision-making.
+> **AI-powered Traffic Monitoring & Congestion Prediction using Computer Vision**
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![YOLO](https://img.shields.io/badge/YOLO-Object%20Detection-red)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv)
+![Deep Learning](https://img.shields.io/badge/Deep%20Learning-AI-orange)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
 ---
 
 ## 📌 Project Overview
 
-Urban Mobility Intelligence is designed to transform raw transportation data into actionable insights. The project focuses on understanding mobility trends, predicting traffic conditions, and enabling data-driven decisions for efficient urban transportation.
+Urban Mobility Intelligence is an **AI-powered computer vision system** designed to analyze road traffic in real time. The system detects vehicles from video streams, estimates traffic density, and predicts congestion trends to support **smart city traffic management** and improve road efficiency.
 
-The system integrates data preprocessing, exploratory analysis, machine learning, and interactive visualizations to provide meaningful insights for commuters, planners, and smart city administrators.
-
----
-
-## ✨ Features
-
-- 🚗 Traffic Pattern Analysis
-- 📊 Interactive Data Visualization
-- 🤖 Machine Learning Models
-- 📈 Traffic Forecasting
-- 🗺️ Route & Mobility Analysis
-- 📍 Geospatial Data Processing
-- 📉 Congestion Detection
-- 📑 Automated Reports
-- ☁️ Scalable Data Pipeline
-- 📱 Dashboard Ready
+By leveraging **YOLO (You Only Look Once)** and **OpenCV**, the project performs fast and accurate object detection, enabling intelligent traffic monitoring and data-driven mobility decisions.
 
 ---
 
-## 🏗️ Project Architecture
+# 🎯 Objectives
 
-```
-Raw Data
-    │
-    ▼
-Data Collection
-    │
-    ▼
-Data Cleaning
-    │
-    ▼
-Exploratory Data Analysis
-    │
-    ▼
-Feature Engineering
-    │
-    ▼
-Machine Learning Models
-    │
-    ▼
-Predictions & Insights
-    │
-    ▼
-Dashboard / Visualization
-```
+- 🚗 Detect vehicles from road surveillance videos
+- 📊 Estimate real-time vehicle density
+- 🚦 Monitor traffic flow
+- 📈 Predict congestion trends
+- 🏙️ Support smart city transportation planning
 
 ---
 
-## 🛠️ Tech Stack
+# ✨ Features
 
-### Programming Language
-
-- Python
-
-### Libraries
-
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Plotly
-
-### Machine Learning
-
-- Regression Models
-- Classification Models
-- Clustering
-- Time Series Forecasting
-
-### Visualization
-
-- Plotly
-- Matplotlib
-- Power BI *(Optional)*
+- Real-time vehicle detection
+- Multi-class object detection
+- Traffic density estimation
+- Congestion monitoring
+- Video frame processing
+- High-speed inference using YOLO
+- Computer vision-based analytics
+- Scalable for CCTV surveillance systems
 
 ---
 
-## 📂 Project Structure
+# 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Programming Language | Python |
+| Object Detection | YOLO |
+| Computer Vision | OpenCV |
+| AI Framework | Deep Learning |
+| Data Processing | NumPy |
+| Visualization | OpenCV Drawing Tools |
+
+---
+
+# 📂 Project Structure
 
 ```
 Urban-Mobility-Intelligence/
 │
-├── data/
-│   ├── raw/
-│   ├── processed/
-│
-├── notebooks/
-│
-├── src/
-│   ├── preprocessing.py
-│   ├── feature_engineering.py
-│   ├── model.py
-│   ├── prediction.py
-│
+├── dataset/
 ├── models/
-│
-├── dashboard/
-│
-├── reports/
-│
-├── images/
+├── videos/
+├── outputs/
+├── notebooks/
+├── src/
+│   ├── detection.py
+│   ├── prediction.py
+│   ├── utils.py
+│   └── main.py
 │
 ├── requirements.txt
 ├── README.md
@@ -118,41 +77,92 @@ Urban-Mobility-Intelligence/
 
 ---
 
-## 📊 Workflow
+# ⚙️ Workflow
 
-1. Collect transportation data
-2. Clean and preprocess data
-3. Perform exploratory data analysis
-4. Engineer useful features
-5. Train machine learning models
-6. Evaluate model performance
-7. Generate predictions
-8. Visualize insights
-9. Deploy dashboard
+```
+Road CCTV Video
+        │
+        ▼
+ Frame Extraction
+        │
+        ▼
+ Vehicle Detection (YOLO)
+        │
+        ▼
+ Vehicle Counting
+        │
+        ▼
+ Traffic Density Analysis
+        │
+        ▼
+ Congestion Prediction
+        │
+        ▼
+ Dashboard / Output
+```
 
 ---
 
-## 📈 Example Use Cases
+# 🧠 AI Pipeline
 
-- Traffic congestion prediction
-- Smart city planning
-- Route optimization
-- Public transport analysis
-- Peak-hour traffic forecasting
-- Urban infrastructure planning
-- Mobility behavior analysis
+- Input traffic video
+- Extract video frames
+- Detect vehicles using YOLO
+- Draw bounding boxes
+- Count detected vehicles
+- Calculate traffic density
+- Analyze congestion level
+- Generate insights and predictions
 
 ---
 
-## 🚀 Installation
+# 📊 Expected Output
+
+- Vehicle detection with bounding boxes
+- Vehicle count
+- Traffic density statistics
+- Congestion level prediction
+- Processed output video
+- Real-time analytics
+
+---
+
+# 🚀 Applications
+
+- Smart Cities
+- Intelligent Transportation Systems (ITS)
+- Traffic Surveillance
+- Urban Planning
+- Highway Monitoring
+- Traffic Control Centers
+- Road Safety Analysis
+- Public Infrastructure Management
+
+---
+
+# 📈 Future Enhancements
+
+- Real-time live CCTV integration
+- Vehicle speed estimation
+- Accident detection
+- Emergency vehicle recognition
+- Lane detection
+- Traffic signal optimization
+- Dashboard with analytics
+- Cloud deployment
+- Edge AI implementation
+
+---
+
+# 💻 Installation
 
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/Urban-Mobility-Intelligence.git
+git clone https://github.com/yourusername/Urban-Mobility-Intelligence.git
 ```
 
-Navigate to the project
+Navigate to the project folder
 
 ```bash
 cd Urban-Mobility-Intelligence
@@ -164,66 +174,77 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Run the project
+Run the application
 
 ```bash
-python app.py
+python main.py
 ```
 
 ---
 
-## 📊 Sample Output
+# 📦 Requirements
 
-- Traffic Heatmaps
-- Mobility Trend Charts
-- Congestion Prediction
-- Interactive Dashboard
-- Performance Metrics
+- Python 3.10+
+- OpenCV
+- NumPy
+- YOLO Model
+- CUDA (Optional for GPU acceleration)
 
----
+Install manually
 
-## 🎯 Future Improvements
-
-- Real-time traffic prediction
-- IoT sensor integration
-- Deep Learning models
-- Reinforcement Learning for route optimization
-- Live GPS tracking
-- Smart parking analytics
-- Cloud deployment
-- Mobile application
+```bash
+pip install opencv-python numpy ultralytics
+```
 
 ---
 
-## 🤝 Contributing
+# 📸 Demo
+
+> Add screenshots or GIFs demonstrating:
+>
+> - Vehicle Detection
+> - Traffic Density Analysis
+> - Congestion Prediction
+> - Output Video Frames
+
+---
+
+# 📚 Learning Outcomes
+
+This project demonstrates practical implementation of:
+
+- Computer Vision
+- Deep Learning
+- Object Detection
+- Traffic Analytics
+- Video Processing
+- Smart City AI Solutions
+- Urban Mobility Intelligence
+
+---
+
+# 🤝 Contributing
 
 Contributions are welcome!
 
 1. Fork the repository
-2. Create a feature branch
+2. Create a new branch
 3. Commit your changes
-4. Push the branch
+4. Push to your branch
 5. Open a Pull Request
 
 ---
 
-## 📄 License
+# 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
-## 👩‍💻 Author
+# 👩‍💻 Author
 
 **Renuka Khopale**
 
-AI Engineer | Data Scientist | Machine Learning Enthusiast
+AI Engineer • Machine Learning • Computer Vision • Deep Learning • Data Science
 
-- GitHub: https://github.com/RenukaSKhopale
-- Portfolio: https://renukaskhopale.github.io/
-
----
-
-## ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub!
+⭐ If you found this project useful, don't forget to **Star** the repository!
